@@ -2,22 +2,15 @@ require 'stashboardmanager'
 
 describe Stashboardmanager::Manager do
   #Setup the remote instance ready for the tests
-  puts "Preparing for tests"
   manager = Stashboardmanager::Manager.new("https://stashmanagertest.appspot.com", "1/3x3oY6MRqACaMmuzr0pr76_3J9zkB3sJX_rIMCFU-cU", "p2K71wl3ekDBNF88UcAnFfUi")
 
   ids = manager.service_ids
-
-  puts ids
 
   ids.each do |id|
     manager.service_update(id, "up", "Resetting #{id} for testing purposes")
   end
 
   id = ids[0]
-
-  puts id
-
-  puts manager.service_status(id)
 
   it "Has reset all" do
     manager.service_status(id).should eql("up")

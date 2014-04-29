@@ -2,11 +2,8 @@ require "stashboard"
 require "stashboardmanager/version"
 
 module Stashboardmanager
-
-
   # Main class for interacting with StashboardManager.
   class Manager
-
     @stashboard = nil
 
     # Create a new StashboardManager instance.
