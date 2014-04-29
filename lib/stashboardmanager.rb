@@ -18,7 +18,7 @@ module Stashboardmanager
     # @param [String] message The message you wish to attach to this update
     def service_update(service, status, message)
       if service_updatable(service, status)
-        self.generate_stashboard_event(service, status, message)
+        @stashboard.create_event(service, status, message)
       end
     end
 
@@ -73,24 +73,11 @@ module Stashboardmanager
       #What is the current service status?
       serv_stat = self.service_status(service)
 
-      if serv_stat == false       #If false then don't continue (the service does not exist on remote)
-        return nil
-      elsif serv_stat == status   #If match don't update
+      if serv_stat == status   #If match don't update
         return false
       else                        #No match - update
         return true
       end
-    end
-
-    # Create an event of a service. Events are the main way we
-    # indicate problems or resolutions of issues.
-    #
-    # @param [String] service The service you want to update
-    # @param [String] id The id of an already existing status (i.e. "up", "down", "warning" or "error")
-    # @param [String] message The message we want our event to have attached
-    # @return [Hash] event The event details
-    def generate_stashboard_event(service, status, message)
-      @stashboard.create_event(service, status, message)
     end
   end
 
