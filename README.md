@@ -1,4 +1,4 @@
-# Stashboardmanager [![Gem Version](https://badge.fury.io/rb/stashboardmanager.svg)](https://rubygems.org/gems/stashboardmanager) [![Build Status](https://travis-ci.org/mattrayner/stashboardmanager.svg?branch=master)](https://travis-ci.org/mattrayner/stashboardmanager)
+# Stashboardmanager [![Gem Version](https://badge.fury.io/rb/stashboardmanager.svg)](https://rubygems.org/gems/stashboardmanager) [![Build Status](https://travis-ci.org/RubyStashboardUsers/stashboardmanager.svg?branch=master)](https://travis-ci.org/RubyStashboardUsers/stashboardmanager)
 
 A super-simple manager for stashboard, allowing you to easily update a stashboard instance with events throughout your application.
 
