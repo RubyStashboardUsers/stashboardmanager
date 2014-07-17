@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/mattrayner/stashboardmanager"
   spec.license       = "MIT"
 
-  spec.add_dependency "stashboard-ruby", "~> 0.1.0"
+  spec.add_dependency "stashboard-ruby"
   spec.add_development_dependency "rspec", "~> 2.6"
 
   spec.files         = `git ls-files -z`.split("\x0")
